@@ -194,9 +194,8 @@ int main(){
     int k = 0;
     int i;
   
-    //Open movies files for future use
-    ifstream fm("./data/movies.csv");
-    // ifstream fm("./data/movies.csv");
+    //Open movies file for future use
+    ifstream fm("C:\\Users\\Sofia\\Documents\\Programacion\\C\\VS code\\Semestre 2\\tecflix\\data\\movies.csv");
         while (getline(fm,line)){
             stringstream ss(line);
             i = 0;
@@ -208,7 +207,7 @@ int main(){
         }
     fm.close(); 
     
-    ifstream fs("./data/series.csv");
+    ifstream fs("C:\\Users\\Sofia\\Documents\\Programacion\\C\\VS code\\Semestre 2\\tecflix\\data\\series.csv");
         while (getline(fs,line)){
             stringstream ss(line);
             i = 0;
@@ -308,7 +307,7 @@ int main(){
         }
     }
     else if (option == "6"){ //Save changes
-        ofstream of("./data/movies.csv");
+        ofstream of("C:\\Users\\Sofia\\Documents\\Programacion\\C\\VS code\\Semestre 2\\tecflix\\data\\movies.csv");
         for (int i = 0; i<30; i++){
             m[i].saveChanges(of);
         }
@@ -366,7 +365,7 @@ int main(){
         }
     }
     else if (option == "11"){
-        ofstream of("./data/series.csv");
+        ofstream of("C:\\Users\\Sofia\\Documents\\Programacion\\C\\VS code\\Semestre 2\\tecflix\\data\\series.csv");
         for (int i = 0; i<29; i++){
             s[i].saveChanges(of);
         }
