@@ -69,10 +69,8 @@ class Video{
             for (int j = 0; j < stringLength(searchStr); j++) {
                 char currentChar = name[i + j];
                 char searchChar = searchStr[j];
-                
-                // Convert to lowercase (acii values, lowercase alphabet follows uppercase, +=32)
-                if (currentChar >= 'A' && currentChar <= 'Z') currentChar += 32;
-                if (searchChar >= 'A' && searchChar <= 'Z') searchChar += 32;
+                currentChar = tolower(currentChar);
+                searchChar = tolower(searchChar);
                 
                 if (currentChar != searchChar) {
                     match = false;
